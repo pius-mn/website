@@ -1,0 +1,72 @@
+
+.outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+}
+.inner-grid {
+   flex: 25%;
+   max-width: 25%;
+   padding: 0 4px;
+}
+.inner-grid img {
+   margin-top: 8px;
+   width: 100%;
+   padding: 10px;
+}
+@media screen and (max-width: 800px) {
+   .inner-grid {
+      flex: 50%;
+      max-width: 50%;
+   }
+}
+@media screen and (max-width: 600px) {
+   .inner-grid {
+      flex: 100%;
+      max-width: 100%;
+   }
+}
+        #id_password,#id_password1,#search,#id_password2,#id_email,#id_full_name, #id_username,#id_new_password1, #id_new_password2{
+            border: none;
+            border-bottom:2px solid green ;
+            width: 100%;
+        }
+       
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+  
+ 
+}
+
+
+#slider {
+  width: 600px;
+  height: 200px;
+  overflow: hidden;
+  margin: 30px auto;
+  
+}
+
+.num {
+  width: 600px;
+  height: 200px;
+  float: left;
+  display: none;
+}
+
+.btnleft, .btnright {
+  padding: 5px 10px;
+  background-color: #F0F0F0;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #666;
+}
+
+.btnleft {
+  float: left;
+}
+
+.btnright {
+  float: right;
+}

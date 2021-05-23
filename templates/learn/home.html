@@ -1,0 +1,52 @@
+{% extends "learn/base.html" %}
+{% load static %}
+{% block header %}
+home
+{% endblock %}
+{% block content %}
+  
+	<h2>pius_webmasters.com</h2>
+<h3><u style="color: green;"></u> Welcome to pius_webmasters !
+  {% if user.is_authenticated %}
+    <b style="color: purple;">,{{ user.full_name }}</b> {% else %} <b style="color: purple;">,visitor</b></h3>	
+{% endif %}
+<!-- !PAGE CONTENT! -->
+          <div class="wrapper w3-mobile w3-container">
+            <div id='slider' class="w3-mobile">
+                <img class="num w3-mobile" id='1' src="{% static 'learn\images\php.jpg' %}" >
+                <img class='num w3-mobile' id='2' src="{% static 'learn\images\js1.png' %}" >
+                <img class='num w3-mobile' id='3' src="{% static 'learn\images\c.png' %}" >
+                <img class='num w3-mobile' id='4' src="{% static 'learn\images\c++.png' %}" >
+            </div>
+            <a class='btnleft' href='#' onclick='prev(); return false;'>Previous</a>
+            <a class='btnright' href='#' onclick='next(); return false;'>Next</a>
+        </div>
+     
+
+  <!-- First Photo Grid-->
+  <div class="outer-grid">
+    <div class="inner-grid">
+      <img src="{% static 'learn\images\php.jpg' %}" alt="Sandwich">
+      <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="inner-grid">
+      <img src="{% static 'learn\images\java.png' %}" alt="Steak">
+      <h3>Let Me Tell You About This Steak</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="inner-grid">
+      <img src="{% static 'learn\images\js.png' %}" alt="Cherries">
+      <h3>Cherries, interrupted</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <p>What else?</p>
+    </div>
+    <div class="inner-grid">
+      <img src="{% static 'learn\images\c.png' %}" alt="Pasta and Wine">
+      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+ {% endblock %}

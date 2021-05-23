@@ -1,0 +1,27 @@
+{% extends "learn/content.html" %}
+{% block header %}
+introduction to javascript
+{% endblock %}
+{% block links%}
+{% for i in js  %}
+<a class="w3-bar-item w3-button" href="#">javascript {{i}} </a>
+{% endfor %}
+{% endblock%}
+{% block tutorial %}
+<h3>Hi  <u>{{ user.full_name }},</u> Welcome to javascript</h3>	
+<h4>content goes here</h4>
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+{% endblock %}

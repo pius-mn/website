@@ -1,0 +1,34 @@
+{% extends "learn/base.html" %}
+{% load static %}
+{% block header %}
+signup
+{% endblock %}
+{% block content %}
+<div class="w3-modal-content w3-card-8 w3-animate-zoom " style="max-width: 600px;">
+	<div class="w3-center"><br>
+	  <img src="#" alt="logo" style="width: 30%;" class="w3-circle w3-margin-top">
+	</div>
+	<div class="w3-container">
+	  <div class="w3-section">
+	<fieldset class="w3-round-xlarge w3-card-4"><form action="{% url 'signup' %}" method="POST">
+			{% csrf_token %}
+			{% for field in form %}
+			<p>
+			  {{ field.label_tag }}<br/>
+			  {{ field }}
+			  {% if field.help_text %}
+				<small style="color: green">{{ field.help_text }}</small>
+			  {% endif %}
+			  {% for error in field.errors %}
+				<p style="color: red">{{ error }}</p>
+			  {% endfor %}
+			</p>
+			{% endfor %}
+		  <button class="w3-btn w3-btn-block w3-round-xlarge  w3-blue" style="width: 100%;" type="submit">create account</button>
+		</form></fieldset>	
+	  </div>
+	</div>
+	</div>
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "learn/base.html" %}
+{% block content %}
+<h1>Search Results</h1>
+{% if not object_list %}
+<p class="w3-center w3-card-4"><h1> Sorry Results Not Found !</h1>  </p>
+{% else %}
+<ul class="w3-ul">
+
+  {% for result in object_list %}
+  {% url result.name as url %}
+    <li class="w3-card-4">
+   <a href="{{url}}"><h3 style="color: blue;"><b>{{ result.name }}</b></h3> </a>
+       {{ result.description }}
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

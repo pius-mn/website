@@ -1,0 +1,61 @@
+{% extends "learn/content.html" %}
+
+{% block header %}
+Introduction to system design and Analysis
+{% endblock %}
+{% block links%}
+{% for i in sad  %}
+{% url i as url %}
+<a class="w3-bar-item w3-button" href="{{url}}">sytem {{i}} </a>
+{% endfor %}
+ {% endblock %}
+{% block sad1 %}
+
+     
+      {% endblock %}
+
+      {% block tutorial %}
+     <h1> CIT 3154 	:	SYSTEM ANALYSIS AND DESIGN</h1>
+Lecturer	:  	Stephen Mageto <br>
+Contact Hours:	45 <br>
+
+<h2></h2>Pre-requisite		Introduction to Computer Systems</h2>
+
+<h3>Purpose of the Course</h3>
+The course enables the students understand systems, manage systems projects and design systems. <br>
+
+<p><b>Expected Learning Outcomes:</b></p>
+By the end of the course the student should be able to: <br>
+<ul style="list-style-type:circle ;">
+<li>Plan, analyze, design, and implement an information system using the Systems Development Life Cycle model to solve current business problems.</li>
+<li>Understand different types of systems.</li> 
+<li>Know the objectives and characteristics of a system.</li> 
+<li>Understand the basic ethics and security aspects for information systems.</li> 
+</ul>
+Course Content:
+Introduction to the general system concepts; elements of a system, system characteristics, methodologies, general stages in system development, automated tools for system development, system complexity and sub-systems. System project identification and selection; identifying potential system development projects, classifying and ranking system projects, selecting system projects for development. Feasibility study of the system. Analysis; system requirement determination, system requirement structuring, and alternative, generation & selection. Design; objectives of design, user interfaces & dialogues, input & output, file organization, database & components, procedures & programs, finding design specifications, and processing & system security. System implementation; types of installation, types of testing, and system documentation. Maintenance; major activities that occur within maintenance, and factors affecting the cost of maintenance.  
+
+Mode of Delivery:
+•	Lectures 
+•	Tutorials 
+•	Independent study 
+•	Group discussions
+
+Course Assessment
+Type			Weighting (%)
+Examination			70
+Continuous Assessment	30
+Total				100
+
+Core Reading Material
+1.	Joseph V., Joey G. and Jeff H.: Essentials of System Analysis and Design: International Version 4th Edition, Pearson Higher Education Publishing Company, 2009.
+2.	Shelly, Cashman and Rosenblatt: System Analysis and Design 7th Edition, Course Technology, 2008.
+
+Recommended Reading Material
+1.	Whitten J. L. and Bentley L. D.: System Analysis and Design Methods; McGraw-Hill Publishing Company, 2007. 
+2.	Marakas G.: System Analysis and Design, An Active Approach; McGraw-Hill Publishing Company, 2005.
+3.	Pressman R. S.: Sofware Engineering, Apractitioner’s Approach; McGraw-Hill Publishing Company, 2004.
+4.	Bennett S., McRobb S., and Farmer R.: Object-Oriented Systems Analysis and Design using UML; McGraw-Hill Publishing Company, 2006.
+
+
+      {% endblock %}

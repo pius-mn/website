@@ -1,0 +1,27 @@
+{% extends "learn/base.html" %}
+{% load static %}
+{% block header %}
+login
+{% endblock %}
+{% block content %}
+ <div class="w3-modal-content w3-card-8 w3-animate-zoom " style="max-width: 600px;">
+  <div class="w3-center"><br>
+    <img src="#" alt="login" style="width: 30%;" class="w3-circle w3-margin-top">
+  </div>
+  <div class="w3-container">
+    <div class="w3-section">
+    <fieldset class="w3-round-xlarge w3-card-4"> <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="w3-btn w3-btn-block w3-round-xlarge  w3-blue" style="width: 100%;" type="submit">login</button>
+      </form> <hr>
+      <label for="" style="float: right;">Forgot password ? <a class="w3-green" href="{% url 'password_reset'%}">click here</a> </label>
+      <input class="w3-check w3-margin-top" type="checkbox" name="" id="" checked="checked">remember me
+    </div></fieldset>
+  </div>
+  </div>
+      
+      
+	</div>
+	</div>
+{% endblock %}

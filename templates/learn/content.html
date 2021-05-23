@@ -1,0 +1,21 @@
+{% extends "learn/base.html" %}
+
+{% block content %}
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-green" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    
+ {% block links%}
+ 
+ {% endblock %}
+
+  </div>
+  <div  id="main">
+  <div class="w3-teal w3-bar">
+    <a  id="openNav" href="#" class="w3-bar-item " onclick="w3_open()">&#9776;</a>
+    <a href="#" class="w3-bar-item">Menu</a>
+  </div>
+    
+    {%block tutorial %}{% endblock %}
+</div>
+</div>
+{% endblock%}
